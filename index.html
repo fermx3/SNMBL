@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+    />
+    <title>Estudio Sonámbulo</title>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="src/images/Sonambulo_Favicon_S.png"
+    />
+    <!-- SVG Icons -->
+    <link href="https://css.gg/close.css" rel="stylesheet" />
+    <link href="https://css.gg/facebook.css" rel="stylesheet" />
+    <link href="https://css.gg/instagram.css" rel="stylesheet" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Syne:wght@700;800&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Main Css -->
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Animations Css -->
+    <link rel="stylesheet" href="animations.css" />
+  </head>
+  <body>
+    <nav>
+      <a href="#">
+        <img
+          class="menu-logo flicker-5"
+          src="src/images/SNMBL_Negro_300px.png"
+          alt="Logo Sonámbulo"
+        />
+      </a>
+      <h2 class="menu-button">Menú</h2>
+      <div class="menu-modal">
+        <div class="menu-header">
+          <i class="gg-close close-icon"></i>
+        </div>
+        <div class="main-menu">
+          <ul>
+            <li><a href="#nosotros" class="anchor">Nosotros</a></li>
+            <li><a href="#equipo">Equipo</a></li>
+            <li><a href="#trabajo">Trabajo</a></li>
+            <li><a href="#experiencia">Experiencia</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+          </ul>
+        </div>
+        <div class="menu-footer">
+          <a
+            href="https://www.facebook.com/STDSNMBL"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i class="gg-facebook social-icon"></i>
+          </a>
+          <a
+            href="https://www.instagram.com/sonambuloestudio/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i class="gg-instagram social-icon"></i>
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div class="horizontal-container">
+      <section class="portada horizontal-section">
+        <div class="video-container">
+          <video class="main-video" autoplay muted loop>
+            <source
+              src="src/videos/pexels-kindel-media-7615704.mp4"
+              type="video/mp4"
+            />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <div class="main-logo-container">
+          <img
+            class="main-logo"
+            src="src/images/Sonambulo_Verde_800px.png"
+            alt="Logo-Sonámbulo"
+          />
+          <p class="logo-subtitle">Digital Estate of Mind</p>
+        </div>
+        <div class="main-title-container">
+          <h2 class="portada-title">
+            Creemos en el poder<br /><span
+              class="txt-rotate"
+              data-period="2000"
+              data-rotate='[ "DEL STORYTELLING", "DE LA INNOVACIÓN", "DE LA CULTURA" ]'
+            ></span>
+          </h2>
+        </div>
+        <div class="rectangle"></div>
+      </section>
+      <section id="nosotros" class="horizontal-section"></section>
+      <section class="horizontal-section"></section>
+      <section id="equipo" class="horizontal-section"></section>
+      <section id="trabajo" class="horizontal-section"></section>
+      <section id="experiencia" class="horizontal-section"></section>
+      <section id="contacto" class="horizontal-section"></section>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollToPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/Draggable.min.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>

@@ -1,0 +1,1259 @@
+/*********** NORMALIZE ************/
+/* Prevent to wrap words on texts */
+.et_pb_text {
+  word-wrap: unset;
+}
+
+/* Buttons */
+
+.et_button_no_icon.et_button_icon_visible.et_button_left .et_pb_button,
+.et_button_no_icon.et_button_left .et_pb_button:hover,
+.et_button_no_icon .et_pb_button,
+.et_button_no_icon .et_pb_button:hover {
+  padding: 0 32px !important;
+}
+
+/*** Responsive Styles Smartphone Only ***/
+@media all and (max-width: 767px) {
+  .et_button_no_icon.et_button_icon_visible.et_button_left .et_pb_button,
+  .et_button_no_icon.et_button_left .et_pb_button:hover,
+  .et_button_no_icon .et_pb_button,
+  .et_button_no_icon .et_pb_button:hover {
+    width: 100% !important;
+  }
+}
+
+/*********** LAYOUT **************/
+/* Horizontal Scroll Containers */
+
+.horizontal-container {
+  width: 700%;
+  height: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  max-width: none;
+}
+
+#page-container {
+  overflow: hidden;
+}
+
+.horizontal-section {
+  width: 100%;
+  will-change: transform;
+}
+
+.flex-container {
+  /*height: 10vh;*/
+  overflow-y: visible;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-around;
+  align-items: center;
+  /*align-content: center;*/
+}
+
+.flex-left-align {
+  justify-content: flex-start;
+}
+
+.card {
+  background: #000;
+  margin: 3vh auto;
+  text-align: center;
+}
+
+/************ MAIN CSS *********/
+.subtitle {
+  color: #6eff6e !important;
+  padding-bottom: 0;
+  font-size: 2rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-align: left;
+}
+
+.section-title {
+  position: absolute;
+  font-size: 4rem;
+  color: #6eff6e !important;
+  font-family: "Syne", Helvetica, Arial, Lucida, sans-serif;
+  font-weight: 800;
+  width: auto !important;
+  text-transform: uppercase;
+  left: -290px;
+}
+
+.section-title-black {
+  color: #000 !important;
+  left: -400px !important;
+}
+
+.rotated-title {
+  transform: rotate(-90deg);
+  position: absolute;
+  top: 35vh;
+  left: -6px;
+  z-index: 9999999;
+}
+
+/************MENU***************/
+/*show desktop menu on phone*/
+
+@media (max-width: 980px) {
+  .pa-open-mobile-menu .et_pb_menu__menu {
+    display: flex !important;
+  }
+  .pa-open-mobile-menu .et_mobile_nav_menu {
+    display: none !important;
+  }
+}
+
+/*remove default 11px margin on each side of list menu items*/
+
+.et_pb_menu .et-menu {
+  margin-left: 0px !important;
+  margin-right: 0px !important;
+}
+
+/*make the menu items fullwidth and add space between them*/
+
+.pa-vertical-menu .et_pb_menu__menu nav ul li {
+  display: block !important;
+  width: 100%;
+  margin: 10px 0;
+}
+
+.menu-active {
+  display: flex !important;
+  /*display: block !important;*/
+  animation: slide-in-r 1s ease 0s 1 normal forwards;
+}
+
+#menu-main-menu > li {
+  opacity: 0;
+}
+
+.menu-btn-active {
+  /* display: none; */
+  animation: slide-out-r 1s ease 0s 1 normal forwards;
+}
+
+/*********** PORTADA **************/
+.portada-title {
+  margin-top: 7vh;
+  color: #fff !important;
+}
+
+.txt-rotate {
+  font-family: "PP NEUEBIT BOLD", Helvetica, Arial, Lucida, sans-serif;
+  color: #6eff6e;
+  font-size: 2rem;
+}
+
+/* VIDEO */
+/*** Responsive Styles Tablet And Below ***/
+@media all and (max-width: 980px) {
+  #main-video {
+    margin-top: 12vh;
+  }
+
+  .video-fila {
+    margin-top: 0;
+  }
+}
+
+/*********** NOSOTROS ************/
+.rotated-title.left-to-right {
+  left: -5rem;
+}
+.grid-container {
+  display: grid;
+  width: 80vw;
+  margin: auto;
+  grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
+  gap: 5rem;
+  align-items: center;
+}
+.text-container {
+  max-width: 600px;
+  margin-left: 2rem;
+}
+.main-p {
+  font-size: 3rem;
+  line-height: 3rem;
+  padding: 20px !important;
+  text-align: left !important;
+  letter-spacing: 2px;
+}
+.decorative-img:before {
+  background-color: #808080;
+  content: "";
+  display: block;
+  left: 50%;
+  margin: 0;
+  max-width: 550px;
+  opacity: 1;
+  padding: 0 0 75%;
+  position: absolute;
+  top: 70%;
+  -webkit-transform: translate(calc(-50% - 80px), -50%);
+  transform: translate(calc(-50% - 80px), -50%);
+  transition: border-color 0.5s;
+  width: 100%;
+  z-index: -1;
+}
+.decorative-img {
+  position: absolute;
+  bottom: -150px;
+  right: 100px;
+  max-width: 500px;
+  /*box-shadow: rgba(110, 255, 110, 0.4) -5px 5px, rgba(110, 255, 110, 0.3) -10px 10px, rgba(110, 255, 110, 0.2) -15px 15px, rgba(110, 255, 110, 0.1) -20px 20px, rgba(110, 255, 110, 0.05) -25px 25px;*/
+  z-index: -1;
+}
+
+.list li {
+  font-family: "DM Sans", Helvetica, Arial, Lucida, sans-serif;
+  list-style: none;
+  margin: 20px 0;
+  font-size: 2rem;
+  text-transform: capitalize;
+}
+.list li:hover {
+  text-decoration: underline;
+}
+.answer {
+  font-size: 2rem;
+  line-height: 2rem;
+  letter-spacing: 2px;
+  text-align: left;
+}
+
+/*********** EQUIPO **************/
+.equipo-container {
+  width: 80vw;
+  margin: auto;
+}
+.profile-pic {
+  width: 300px;
+  height: 300px;
+  border-radius: 100%;
+  object-fit: cover;
+}
+
+.profile-name,
+.profile-desc {
+  text-align: center;
+}
+
+/*********** TRABAJO **************/
+/* Blog Module*/
+
+/*style the individual posts*/
+.et_pb_posts .et_pb_post {
+  padding: 30px;
+  background: #000;
+  border-radius: 10px;
+  -webkit-column-break-inside: avoid; /* Chrome, Safari, Opera */
+  page-break-inside: avoid; /* Firefox */
+  break-inside: avoid; /* IE 10+ */
+}
+
+/*********** EXPERIENCIA **********/
+.experiencia-container {
+  gap: 0 30px;
+  width: 80%;
+  margin: 80px auto;
+  height: 80vh;
+  align-items: center !important;
+}
+
+.logo-img {
+  width: 200px;
+}
+
+.subtitle-black {
+  position: absolute;
+  color: #000;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  top: 100px;
+  left: 10%;
+}
+
+/********* CONTACTO *************/
+.datos-contacto {
+  margin-top: 250px;
+}
+
+.datos-contacto > h3 {
+  font-size: 2rem;
+}
+
+/*********** ANIMATION ************/
+/* Menu */
+
+.intro-animation-r {
+  animation: slide-in-r 0.5s ease 0s 1 normal forwards;
+}
+
+@keyframes slide-in-r {
+  0% {
+    opacity: 0;
+    transform: translateX(250px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.intro-animation-l {
+  animation: slide-in-l 1s ease 0.1s 1 normal forwards;
+}
+
+@keyframes slide-in-l {
+  0% {
+    opacity: 0;
+    transform: translateX(-250px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.outro-animation-r {
+  animation: slide-out-r 1s ease 0.1s 1 normal forwards;
+}
+
+.outro-animation-l {
+  animation: slide-out-l 1s ease 0s 1 normal backwards;
+}
+
+@keyframes slide-out-r {
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateX(250px);
+  }
+}
+
+@keyframes slide-out-l {
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateX(-250px);
+  }
+}
+
+/* Menu Logo */
+.flicker-5 {
+  -webkit-animation: flicker-5 8s linear infinite both;
+  animation: flicker-5 8s linear infinite both;
+}
+
+/* ----------------------------------------------
+     * Generated by Animista on 2022-7-20 15:38:31
+     * Licensed under FreeBSD License.
+     * See http://animista.net/license for more info. 
+     * w: http://animista.net, t: @cssanimista
+     * ---------------------------------------------- */
+
+/**
+     * ----------------------------------------
+     * animation flicker-5
+     * ----------------------------------------
+     */
+@-webkit-keyframes flicker-5 {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  -0.02% {
+    opacity: 1;
+  }
+  0% {
+    opacity: 1;
+  }
+  1% {
+    opacity: 1;
+  }
+  1.02% {
+    opacity: 1;
+  }
+  8.98% {
+    opacity: 1;
+  }
+  9% {
+    opacity: 0;
+  }
+  9.8% {
+    opacity: 0;
+  }
+  9.82% {
+    opacity: 1;
+  }
+  9.48% {
+    opacity: 1;
+  }
+  9.5% {
+    opacity: 1;
+  }
+  9.6% {
+    opacity: 1;
+  }
+  9.62% {
+    opacity: 1;
+  }
+  14.98% {
+    opacity: 1;
+  }
+  15% {
+    opacity: 0.5;
+  }
+  15.8% {
+    opacity: 0.5;
+  }
+  15.82% {
+    opacity: 1;
+  }
+  15.18% {
+    opacity: 1;
+  }
+  15.2% {
+    opacity: 0.7;
+  }
+  16% {
+    opacity: 0.7;
+  }
+  16.02% {
+    opacity: 1;
+  }
+  15.48% {
+    opacity: 1;
+  }
+  15.5% {
+    opacity: 0.5;
+  }
+  16.2% {
+    opacity: 0.5;
+  }
+  16.22% {
+    opacity: 1;
+  }
+  16.98% {
+    opacity: 1;
+  }
+  17% {
+    opacity: 1;
+  }
+  17.8% {
+    opacity: 1;
+  }
+  17.82% {
+    opacity: 1;
+  }
+  20.48% {
+    opacity: 1;
+  }
+  20.5% {
+    opacity: 0.9;
+  }
+  21.3% {
+    opacity: 0.9;
+  }
+  21.32% {
+    opacity: 1;
+  }
+  20.98% {
+    opacity: 1;
+  }
+  21% {
+    opacity: 1;
+  }
+  22% {
+    opacity: 1;
+  }
+  22.02% {
+    opacity: 1;
+  }
+  39.98% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 1;
+  }
+  41% {
+    opacity: 1;
+  }
+  41.02% {
+    opacity: 1;
+  }
+  40.48% {
+    opacity: 1;
+  }
+  40.5% {
+    opacity: 0.6;
+  }
+  41.4% {
+    opacity: 0.6;
+  }
+  41.42% {
+    opacity: 1;
+  }
+  41.98% {
+    opacity: 1;
+  }
+  42% {
+    opacity: 1;
+  }
+  42.8% {
+    opacity: 1;
+  }
+  42.82% {
+    opacity: 1;
+  }
+  59.98% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 1;
+  }
+  61% {
+    opacity: 1;
+  }
+  61.02% {
+    opacity: 1;
+  }
+  60.18% {
+    opacity: 1;
+  }
+  60.2% {
+    opacity: 0.2;
+  }
+  61% {
+    opacity: 0.2;
+  }
+  61.02% {
+    opacity: 1;
+  }
+  60.78% {
+    opacity: 1;
+  }
+  60.8% {
+    opacity: 0.4;
+  }
+  61.6% {
+    opacity: 0.4;
+  }
+  61.62% {
+    opacity: 1;
+  }
+  61.38% {
+    opacity: 1;
+  }
+  61.4% {
+    opacity: 0;
+  }
+  62.2% {
+    opacity: 0;
+  }
+  62.22% {
+    opacity: 1;
+  }
+  61.78% {
+    opacity: 1;
+  }
+  61.8% {
+    opacity: 1;
+  }
+  62.8% {
+    opacity: 1;
+  }
+  62.82% {
+    opacity: 1;
+  }
+  75.98% {
+    opacity: 1;
+  }
+  76% {
+    opacity: 1;
+  }
+  77% {
+    opacity: 1;
+  }
+  77.02% {
+    opacity: 1;
+  }
+  77.98% {
+    opacity: 1;
+  }
+  78% {
+    opacity: 0.7;
+  }
+  78.8% {
+    opacity: 0.7;
+  }
+  78.82% {
+    opacity: 1;
+  }
+  78.98% {
+    opacity: 1;
+  }
+  79% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  80.02% {
+    opacity: 1;
+  }
+  99.98% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+  101% {
+    opacity: 1;
+  }
+  101.02% {
+    opacity: 1;
+  }
+}
+
+@keyframes flicker-5 {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  -0.02% {
+    opacity: 1;
+  }
+  0% {
+    opacity: 1;
+  }
+  1% {
+    opacity: 1;
+  }
+  1.02% {
+    opacity: 1;
+  }
+  8.98% {
+    opacity: 1;
+  }
+  9% {
+    opacity: 0;
+  }
+  9.8% {
+    opacity: 0;
+  }
+  9.82% {
+    opacity: 1;
+  }
+  9.48% {
+    opacity: 1;
+  }
+  9.5% {
+    opacity: 1;
+  }
+  9.6% {
+    opacity: 1;
+  }
+  9.62% {
+    opacity: 1;
+  }
+  14.98% {
+    opacity: 1;
+  }
+  15% {
+    opacity: 0.5;
+  }
+  15.8% {
+    opacity: 0.5;
+  }
+  15.82% {
+    opacity: 1;
+  }
+  15.18% {
+    opacity: 1;
+  }
+  15.2% {
+    opacity: 0.7;
+  }
+  16% {
+    opacity: 0.7;
+  }
+  16.02% {
+    opacity: 1;
+  }
+  15.48% {
+    opacity: 1;
+  }
+  15.5% {
+    opacity: 0.5;
+  }
+  16.2% {
+    opacity: 0.5;
+  }
+  16.22% {
+    opacity: 1;
+  }
+  16.98% {
+    opacity: 1;
+  }
+  17% {
+    opacity: 1;
+  }
+  17.8% {
+    opacity: 1;
+  }
+  17.82% {
+    opacity: 1;
+  }
+  20.48% {
+    opacity: 1;
+  }
+  20.5% {
+    opacity: 0.9;
+  }
+  21.3% {
+    opacity: 0.9;
+  }
+  21.32% {
+    opacity: 1;
+  }
+  20.98% {
+    opacity: 1;
+  }
+  21% {
+    opacity: 1;
+  }
+  22% {
+    opacity: 1;
+  }
+  22.02% {
+    opacity: 1;
+  }
+  39.98% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 1;
+  }
+  41% {
+    opacity: 1;
+  }
+  41.02% {
+    opacity: 1;
+  }
+  40.48% {
+    opacity: 1;
+  }
+  40.5% {
+    opacity: 0.6;
+  }
+  41.4% {
+    opacity: 0.6;
+  }
+  41.42% {
+    opacity: 1;
+  }
+  41.98% {
+    opacity: 1;
+  }
+  42% {
+    opacity: 1;
+  }
+  42.8% {
+    opacity: 1;
+  }
+  42.82% {
+    opacity: 1;
+  }
+  59.98% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 1;
+  }
+  61% {
+    opacity: 1;
+  }
+  61.02% {
+    opacity: 1;
+  }
+  60.18% {
+    opacity: 1;
+  }
+  60.2% {
+    opacity: 0.2;
+  }
+  61% {
+    opacity: 0.2;
+  }
+  61.02% {
+    opacity: 1;
+  }
+  60.78% {
+    opacity: 1;
+  }
+  60.8% {
+    opacity: 0.4;
+  }
+  61.6% {
+    opacity: 0.4;
+  }
+  61.62% {
+    opacity: 1;
+  }
+  61.38% {
+    opacity: 1;
+  }
+  61.4% {
+    opacity: 0;
+  }
+  62.2% {
+    opacity: 0;
+  }
+  62.22% {
+    opacity: 1;
+  }
+  61.78% {
+    opacity: 1;
+  }
+  61.8% {
+    opacity: 1;
+  }
+  62.8% {
+    opacity: 1;
+  }
+  62.82% {
+    opacity: 1;
+  }
+  75.98% {
+    opacity: 1;
+  }
+  76% {
+    opacity: 1;
+  }
+  77% {
+    opacity: 1;
+  }
+  77.02% {
+    opacity: 1;
+  }
+  77.98% {
+    opacity: 1;
+  }
+  78% {
+    opacity: 0.7;
+  }
+  78.8% {
+    opacity: 0.7;
+  }
+  78.82% {
+    opacity: 1;
+  }
+  78.98% {
+    opacity: 1;
+  }
+  79% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  80.02% {
+    opacity: 1;
+  }
+  99.98% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+  101% {
+    opacity: 1;
+  }
+  101.02% {
+    opacity: 1;
+  }
+}
+
+/* Main Logo */
+
+.flicker-in-1 {
+  -webkit-animation: flicker-in-1 2s linear both;
+  animation: flicker-in-1 2s linear both;
+}
+
+/* ----------------------------------------------
+   * Generated by Animista on 2022-7-25 14:51:38
+   * Licensed under FreeBSD License.
+   * See http://animista.net/license for more info. 
+   * w: http://animista.net, t: @cssanimista
+   * ---------------------------------------------- */
+
+/**
+   * ----------------------------------------
+   * @animation flicker-in-1
+   * ----------------------------------------
+   */
+@-webkit-keyframes flicker-in-1 {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 0;
+  }
+  10.1% {
+    opacity: 1;
+  }
+  10.2% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 0;
+  }
+  20.1% {
+    opacity: 1;
+  }
+  20.6% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 0;
+  }
+  30.1% {
+    opacity: 1;
+  }
+  30.5% {
+    opacity: 1;
+  }
+  30.6% {
+    opacity: 0;
+  }
+  45% {
+    opacity: 0;
+  }
+  45.1% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  55% {
+    opacity: 1;
+  }
+  55.1% {
+    opacity: 0;
+  }
+  57% {
+    opacity: 0;
+  }
+  57.1% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 1;
+  }
+  60.1% {
+    opacity: 0;
+  }
+  65% {
+    opacity: 0;
+  }
+  65.1% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 1;
+  }
+  75.1% {
+    opacity: 0;
+  }
+  77% {
+    opacity: 0;
+  }
+  77.1% {
+    opacity: 1;
+  }
+  85% {
+    opacity: 1;
+  }
+  85.1% {
+    opacity: 0;
+  }
+  86% {
+    opacity: 0;
+  }
+  86.1% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes flicker-in-1 {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 0;
+  }
+  10.1% {
+    opacity: 1;
+  }
+  10.2% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 0;
+  }
+  20.1% {
+    opacity: 1;
+  }
+  20.6% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 0;
+  }
+  30.1% {
+    opacity: 1;
+  }
+  30.5% {
+    opacity: 1;
+  }
+  30.6% {
+    opacity: 0;
+  }
+  45% {
+    opacity: 0;
+  }
+  45.1% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  55% {
+    opacity: 1;
+  }
+  55.1% {
+    opacity: 0;
+  }
+  57% {
+    opacity: 0;
+  }
+  57.1% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 1;
+  }
+  60.1% {
+    opacity: 0;
+  }
+  65% {
+    opacity: 0;
+  }
+  65.1% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 1;
+  }
+  75.1% {
+    opacity: 0;
+  }
+  77% {
+    opacity: 0;
+  }
+  77.1% {
+    opacity: 1;
+  }
+  85% {
+    opacity: 1;
+  }
+  85.1% {
+    opacity: 0;
+  }
+  86% {
+    opacity: 0;
+  }
+  86.1% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes cursor-blink {
+  0%,
+  50%,
+  100% {
+    opacity: 1;
+  }
+
+  25%,
+  75% {
+    opacity: 0;
+  }
+}
+
+/*Main Content*/
+
+.reveal {
+  opacity: 0.1;
+  will-change: transform, opacity;
+}
+
+.semi-reveal {
+  opacity: 0.8;
+  will-change: transform, opacity;
+}
+
+.woble {
+  border-radius: 250px 750px 250px 750px / 750px 250px 750px 250px;
+  animation: wobble 15s ease-in-out alternate infinite;
+}
+
+@keyframes wobble {
+  50% {
+    border-radius: 750px 550px 350px 750px / 350px 750px 550px 450px;
+  }
+  100% {
+    border-radius: 750px 250px 750px 250px / 250px 750px 250px 750px;
+  }
+}
+
+/******** MEDIA QUERYS *********/
+
+/*** Responsive Styles Smartphone Only ***/
+@media all and (max-width: 767px) {
+  .rotated-title.left-to-right {
+    left: -6rem;
+  }
+  .section-title {
+    font-size: 3rem;
+    left: -300px !important;
+  }
+  .cards-container {
+    margin: 80px 0;
+    height: 70vh;
+    align-content: center;
+    justify-content: space-evenly;
+    gap: 40px 10px;
+  }
+  .card {
+    max-width: 250px !important;
+  }
+  .portada-title {
+    font-size: 1.5rem !important;
+    line-height: 1.5rem;
+    margin-top: 0;
+  }
+  .text-container {
+    max-width: 300px;
+  }
+  .main-p {
+    font-size: 1.6rem !important;
+    line-height: 1.6rem !important;
+  }
+  .bottom-to-top {
+    margin-top: 10rem;
+  }
+  .list li {
+    font-size: 1.5rem !important;
+  }
+  .decorative-img {
+    bottom: 15px !important;
+    opacity: 0.6;
+  }
+  .cards-container:nth-child(odd) {
+    margin-left: 40px;
+  }
+  .pregunta {
+    max-width: 40vw;
+    margin: 0;
+    word-wrap: normal;
+    text-align: left;
+  }
+  .subtitle,
+  .answer {
+    font-size: 1rem !important;
+    line-height: 1rem;
+  }
+  .subtitle {
+    line-height: 1.5rem;
+  }
+  .equipo-container {
+    max-width: 80%;
+    margin: auto;
+    height: 80vh;
+    align-content: space-evenly;
+    gap: 3rem;
+    padding-left: 2rem;
+  }
+  .profile-name {
+    font-size: 1.2rem !important;
+    padding-bottom: 5px !important;
+  }
+  .profile-desc {
+    font-size: 1rem !important;
+  }
+  .profile-pic {
+    width: 100px;
+    height: 100px;
+  }
+  .rotated-title.top-to-bottom-4 {
+    top: 20vh;
+  }
+  .et_pb_button_module_wrapper.et_pb_button_0_wrapper.et_pb_button_alignment_center.et_pb_module {
+    top: 80px;
+  }
+  .rotated-title.top-to-bottom-5 {
+    top: 18vh;
+  }
+  .section-title-black {
+    left: -380px !important;
+  }
+  .experiencia-container {
+    margin: auto;
+    margin-top: 10vh;
+  }
+  .subtitle-black {
+    display: none;
+  }
+}
+
+/*** Responsive Styles Tablet Only ***/
+@media all and (min-width: 768px) and (max-width: 980px) {
+  .subtitle-black {
+    top: -10px;
+  }
+  /* Animation correction */
+  .bottom-to-top {
+    margin-top: 120px;
+    margin-left: 180px;
+  }
+}
