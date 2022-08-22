@@ -41,9 +41,36 @@ h6 {
   letter-spacing: 2px;
 }
 
+p {
+  font-size: 2rem;
+  letter-spacing: 2px;
+}
+
+ul {
+  list-style: none;
+}
+
 a {
   color: var(--ligth-gray);
   text-decoration: none;
+}
+
+button {
+  font-family: "PPNeueBit", Helvetica, Arial, Lucida, sans-serif;
+  font-size: 2rem;
+  text-transform: uppercase;
+  padding: 0.7rem 1.9rem;
+  color: var(--primary-color);
+  background-color: var(--green);
+  border: solid var(--primary-color) 2px;
+  transition: all 0.5s;
+}
+
+button:hover {
+  color: var(--green);
+  background-color: var(--primary-color);
+  border: solid var(--ligth-gray) 2px;
+  transition: all 0.5s;
 }
 
 .social-icon,
@@ -79,6 +106,7 @@ nav {
   font-weight: 700;
   color: var(--secondary-color);
   text-transform: uppercase;
+  filter: drop-shadow(0px 0px 6px #000);
 }
 
 .menu-btn-active {
@@ -126,7 +154,6 @@ nav {
 
 .main-menu ul {
   font-family: "Syne", sans-serif;
-  list-style: none;
 }
 
 .main-menu ul li {
@@ -256,22 +283,294 @@ nav {
   z-index: -2;
 }
 
+/************ NOSOTROS **************/
+.nosotros {
+  display: grid;
+  grid-template-columns: 4rem 1fr;
+  grid-template-rows: repeat(1fr);
+  column-gap: 20px;
+  align-items: center;
+  align-content: center;
+}
+
+.section-title {
+  font-size: 4rem;
+  font-weight: 800;
+  color: var(--green);
+  grid-row: 1 / span 100;
+  text-align: center;
+  writing-mode: vertical-rl;
+  line-height: 4rem;
+  transform: rotate(180deg);
+}
+
+.nosotros-text {
+  grid-column: 2/3;
+  font-size: 3rem;
+  font-weight: bold;
+  line-height: 3rem;
+  padding: 20px;
+  letter-spacing: 2px;
+}
+
+.nosotros-list {
+  grid-column: 3/4;
+  font-size: 2rem;
+}
+
+.subtitle {
+  color: var(--green);
+  font-size: 2rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.nosotros-img {
+  grid-column: 3/4;
+  grid-row: 2/3;
+  width: fit-content;
+  box-shadow: 20px 20px 0 -4px var(--gray);
+}
+.nosotros-img img {
+  width: 40vw;
+}
+
+.nosotros-2 {
+  display: flex;
+  align-items: center;
+}
+
+.grid-container {
+  display: grid;
+  width: 80%;
+  margin: auto;
+  grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
+  gap: 5rem;
+}
+
+/************ EQUIPO **************/
+.equipo,
+.trabajo {
+  display: grid;
+  grid-template-columns: 4rem 1fr;
+  grid-template-rows: repeat(1fr);
+  align-items: center;
+  align-content: center;
+}
+
+.profile {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-pic {
+  width: 300px;
+  height: 300px;
+  padding: 0.5rem;
+  border-radius: 100%;
+  object-fit: cover;
+}
+
+.profile-details {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.profile-desc {
+  font-size: 1.5rem;
+}
+
+/************ TRABAJO **************/
+.trabajo {
+  background-image: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 0.8) 100%
+    ),
+    url("src/images/luna-oceano.jpg");
+  background-size: cover;
+  background-position: 50%;
+  background-repeat: no-repeat;
+}
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 0 3%;
+  cursor: default;
+  background-color: var(--ligth-gray);
+  border: solid 4px var(--gray);
+  box-shadow: 15px 15px 0 -4px var(--ligth-gray), 15px 15px var(--gray);
+  transition: all 0.5s;
+}
+.card:hover {
+  transform: translate3d(-0.5rem, -0.5rem, 0);
+  box-shadow: 23px 23px 0 -4px var(--ligth-gray), 23px 23px var(--gray);
+  transition: all 0.5s;
+}
+.card-details {
+  max-width: 300px;
+  padding: 0.5rem;
+}
+.card-details h3 {
+  color: var(--primary-color);
+  margin-bottom: 0.2rem;
+}
+.card-details p,
+.card-details a {
+  color: var(--primary-color);
+  font-size: 0.8rem;
+}
+.card-desc {
+  margin-bottom: 0.5rem;
+}
+.trabajo-btn {
+  grid-column: 1/ -1;
+  justify-self: center;
+  align-self: center;
+  margin-top: 2rem;
+}
+
+/************ EXPERIENCIA **************/
+.experiencia {
+  background-color: var(--ligth-gray);
+  display: grid;
+  grid-template-columns: 1fr 4rem;
+  grid-template-rows: repeat(30px);
+  align-items: center;
+  align-content: center;
+  z-index: -1;
+}
+.experiencia-grid-container {
+    grid-template-columns: repeat(16rem);
+}
+.experiencia-title {
+  color: var(--primary-color);
+  grid-row: 1 / span 100;
+  grid-column: 2/3;
+}
+.brand{
+    width: fit-content;
+    align-self: center;
+}
+/************ CONTACTO **************/
+.contacto {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.contacto-title {
+    writing-mode: unset;
+    transform: rotate(0);
+    margin-bottom: 1rem;
+}
+.social-media-container {
+    display: flex;
+    margin-top: 2rem;
+}
+.social-media-container .social-icon {
+    margin: 0 1rem;
+}
+
 /*** Responsive Styles Smartphone Only ***/
 @media all and (max-width: 767px) {
+  button {
+    font-size: 1.2rem;
+  }
   .main-menu {
     font-size: 2rem;
+  }
+  .nosotros,
+  .equipo {
+    background-color: var(--primary-color);
+    grid-template-columns: 2rem 1fr;
+    gap: 1;
+  }
+  .section-title {
+    font-size: 2rem;
+    line-height: 2rem;
+  }
+  .nosotros-img {
+    position: absolute;
+    bottom: -100px;
+    right: 50px;
+    grid-column: 2/3;
+  }
+  .nosotros-list {
+    grid-column: 2/3;
+  }
+  .subtitle,
+  p,
+  .nosotros-list li {
+    font-size: 1rem;
+  }
+  .nosotros-text {
+    font-size: 1.6rem;
+    line-height: 1.6rem;
   }
   .rectangle {
     display: none;
   }
+  .grid-container {
+    gap: 2rem;
+  }
   .video-container {
-    box-shadow: var(--gray) 5px 5px
+    box-shadow: var(--gray) 5px 5px;
   }
   .portada-title {
     font-size: 1rem;
   }
-  .txt-rotate{
+  .txt-rotate {
     font-size: 1.5rem;
+  }
+  .profile {
+    flex-direction: unset;
+  }
+  .profile-details {
+    margin-top: 0;
+    margin-left: 1rem;
+  }
+  .profile-name {
+    font-size: 1rem;
+    padding-bottom: 5px;
+  }
+  .profile-desc {
+    font-size: 1rem;
+  }
+  .profile-pic {
+    width: 100px;
+    height: 100px;
+  }
+  .trabajo-grid-container {
+    width: 100%;
+  }
+  .card-img {
+    display: none;
+  }
+  .trabajo-btn {
+    justify-self: stretch;
+  }
+  .mail {
+    font-size: 0.5rem;
+  }
+  .contacto-title {
+    font-size: 1.5rem;
+  }
+  .social-media-container .social-icon {
+    transform: none;
+  }
+  .brand img {
+    width: 100px;
+  }
+  .experiencia-grid-container {
+    grid-template-columns: 50% 50%;
+    gap: 1rem 0;
+    margin-left: auto;
+    margin-right: 0;
   }
 }
 
@@ -303,5 +602,9 @@ nav {
     width: 94vw;
     padding: 0 3vw;
     grid-area: 3/1;
+  }
+  .card-img {
+    width: 90%;
+    height: 90%;
   }
 }
