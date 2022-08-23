@@ -79,6 +79,10 @@ button:hover {
   --ggs: 1.5;
 }
 
+.animate {
+    opacity: 0;
+}
+
 /************ MAIN MENU ****************/
 nav {
   position: fixed;
@@ -468,6 +472,9 @@ nav {
     transform: rotate(0);
     margin-bottom: 1rem;
 }
+.mail-container{
+    margin-top: 60px;
+}
 .social-media-container {
     display: flex;
     margin-top: 2rem;
@@ -597,6 +604,7 @@ nav {
     width: 94vw;
     padding: 0 3vw;
     padding-top: 5rem;
+    margin-left: 40px;
   }
   .main-title-container {
     width: 94vw;
