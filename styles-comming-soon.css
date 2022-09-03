@@ -113,12 +113,18 @@ footer h3 {
 }
 
 @media all and (max-width: 767px) {
-.title-container{
+    .main-container{
+        height: 90vh;
+    }
+  .title-container {
     width: min-content;
     justify-self: center;
-}
-    .comming-soon-title{
+  }
+  .comming-soon-title {
     font-size: 0.8rem;
+  }
+  footer{
+    padding: 2rem 0 0 0;
   }
   footer h3 {
     font-size: 0.5rem;

@@ -11,6 +11,8 @@
   --gray: #808080;
   --ligth-gray: #f2f2f2;
   --green: #6eff6e;
+  --pp-neue-bit: "PPNeueBit", Helvetica, Arial, Lucida, sans-serif;
+
 }
 
 @font-face {
@@ -27,7 +29,6 @@ body {
   color: var(--ligth-gray);
   font-family: "DM Sans", sans-serif;
   overflow-x: hidden;
-  overflow-y: hidden;
 }
 
 h1,
@@ -56,7 +57,7 @@ a {
 }
 
 button {
-  font-family: "PPNeueBit", Helvetica, Arial, Lucida, sans-serif;
+  font-family: var(--pp-neue-bit);
   font-size: 2rem;
   text-transform: uppercase;
   padding: 0.7rem 1.9rem;
@@ -80,7 +81,7 @@ button:hover {
 }
 
 .animate {
-    opacity: 0;
+  opacity: 0;
 }
 
 /************ MAIN MENU ****************/
@@ -104,7 +105,7 @@ nav {
 }
 
 .menu-button {
-  font-family: "PPNeueBit", Helvetica, Arial, Lucida, sans-serif;
+  font-family: var(--pp-neue-bit);
   cursor: default;
   font-size: 2.5rem;
   font-weight: 700;
@@ -119,7 +120,7 @@ nav {
 
 .menu-modal {
   display: none;
-  grid-template-rows: 5rem auto 7.5rem;
+  grid-template-rows: 5rem auto 5rem;
   background-color: var(--primary-color);
   color: var(--secondary-color);
   position: fixed;
@@ -185,7 +186,7 @@ nav {
 
 /* Layout Horizontal Containers */
 .horizontal-container {
-  width: 700%;
+  width: 600%; /* Has to adjust according to # of sections * 100 */
   height: 100%;
   display: flex;
   flex-wrap: nowrap;
@@ -213,6 +214,7 @@ nav {
   grid-template-columns: 1fr;
   grid-template-rows: auto;
   align-content: center;
+  overflow-x: auto;
 }
 
 .video-container {
@@ -257,7 +259,7 @@ nav {
 }
 
 .logo-subtitle {
-  font-family: "PPNeueBit", Helvetica, Arial, Lucida, sans-serif;
+  font-family: var(--pp-neue-bit);
   font-weight: 500;
   font-size: 1.5rem;
   line-height: 1em;
@@ -272,7 +274,7 @@ nav {
 }
 
 .txt-rotate {
-  font-family: "PPNeueBit", Helvetica, Arial, Lucida, sans-serif;
+  font-family: var(--pp-neue-bit);
   font-size: 2rem;
   color: var(--green);
 }
@@ -449,16 +451,21 @@ nav {
   z-index: -1;
 }
 .experiencia-grid-container {
-    grid-template-columns: repeat(16rem);
+  grid-template-columns: repeat(16rem);
+  gap: 2rem;
 }
 .experiencia-title {
   color: var(--primary-color);
   grid-row: 1 / span 100;
   grid-column: 2/3;
 }
-.brand{
-    width: fit-content;
-    align-self: center;
+.brand {
+  width: fit-content;
+  align-items: center;
+}
+.brand img {
+  object-fit: contain;
+  width: 150px;
 }
 /************ CONTACTO **************/
 .contacto {
@@ -468,25 +475,47 @@ nav {
   align-items: center;
 }
 .contacto-title {
-    writing-mode: unset;
-    transform: rotate(0);
-    margin-bottom: 1rem;
+  writing-mode: unset;
+  transform: rotate(0);
+  margin-bottom: 1rem;
 }
-.mail-container{
-    margin-top: 60px;
+.mail-container {
+  margin-top: 60px;
 }
 .social-media-container {
-    display: flex;
-    margin-top: 2rem;
+  display: flex;
+  margin-top: 2rem;
 }
 .social-media-container .social-icon {
-    margin: 0 1rem;
+  margin: 0 1rem;
+}
+
+.scroll-down-container {
+  display: flex;
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: fixed;
+  bottom: 20px;
+  filter: drop-shadow(0px 0px 2px #000);
+  transform: translateY(-35px);
+  animation: slide-bottom 1s ease 3s 1 normal forwards, flicker-5 8s linear infinite both;
+}
+.scroll-down-container p {
+  font-family: var(--pp-neue-bit);
+  font-size: 1rem;
+  letter-spacing: 5px;
+  text-transform: uppercase;
 }
 
 /*** Responsive Styles Smartphone Only ***/
 @media all and (max-width: 767px) {
   button {
     font-size: 1.2rem;
+  }
+  .menu-modal {
+    height: 90vh;
   }
   .main-menu {
     font-size: 2rem;
@@ -568,16 +597,19 @@ nav {
     font-size: 1.5rem;
   }
   .social-media-container .social-icon {
-    transform: none;
+    transform: scale(1);
   }
   .brand img {
-    width: 100px;
+    width: 70px;
   }
   .experiencia-grid-container {
     grid-template-columns: 50% 50%;
-    gap: 1rem 0;
+    gap: 0;
     margin-left: auto;
     margin-right: 0;
+  }
+  .scroll-down-container p {
+    font-size: 0.8rem;
   }
 }
 

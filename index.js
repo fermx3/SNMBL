@@ -3,6 +3,7 @@ var menuButton = document.querySelector(".menu-button");
 var menuModal = document.querySelector(".menu-modal");
 var menuCloseButton = document.querySelector(".close-icon");
 var listItems = document.querySelectorAll(".main-menu > ul > li");
+var scrollDown = document.querySelector(".scroll-down-container");
 
 ///////// MENU FUNCTIONS /////////////////
 //Open Menu
@@ -60,7 +61,7 @@ let scrollTween = gsap.to(sections, {
     pin: true,
     scrub: 1,
     // base vertical scrolling on how wide the container is so it feels more natural.
-    snap: false,
+    snap: 1 / (sections.length - 1),
     end: () =>
       "+=" + document.querySelector(".horizontal-container").offsetWidth,
   },
@@ -173,6 +174,10 @@ if (window.matchMedia("(max-width: 767px)").matches) {
 }
 
 //////////////// ANIMATIONS ////////////////
+// window.addEventListener('scroll', function(){
+//   scrollDown.style.bottom = 10px;
+// })
+
 gsap.to(".animate-r-l-0", {
   x: -100,
   opacity: 1,
@@ -305,7 +310,7 @@ gsap.to(".animate-r-l-3", {
 
 gsap.to(".animate-t-b-4", {
   y: 60,
-  opacity: 2,
+  opacity: 3,
   ease: "none",
   scrollTrigger: {
     trigger: ".animate-t-b-4",
@@ -318,7 +323,7 @@ gsap.to(".animate-t-b-4", {
 
 gsap.to(".animate-b-t-4", {
   y: -60,
-  opacity: 2,
+  opacity: 3,
   ease: "none",
   scrollTrigger: {
     trigger: ".animate-b-t-4",

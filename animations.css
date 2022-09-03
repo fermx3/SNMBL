@@ -610,3 +610,13 @@
     opacity: 0;
   }
 }
+
+@keyframes slide-bottom {
+	0% {
+		transform: translateY(0);
+	}
+
+	100% {
+		transform: translateY(5px);
+	}
+}
