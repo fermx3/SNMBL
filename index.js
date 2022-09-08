@@ -256,32 +256,6 @@ gsap.to(".animate-r-l-1", {
   },
 });
 
-gsap.to(".animate-t-b-3", {
-  y: -40,
-  opacity: 2,
-  ease: "none",
-  scrollTrigger: {
-    trigger: ".animate-t-b-3",
-    containerAnimation: scrollTween,
-    start: "center 80%",
-    end: "center 20%",
-    scrub: true,
-  },
-});
-
-gsap.to(".animate-r-l-2", {
-  x: -40,
-  opacity: 4,
-  ease: "none",
-  scrollTrigger: {
-    trigger: ".animate-r-l-2",
-    containerAnimation: scrollTween,
-    start: "center 80%",
-    end: "center 20%",
-    scrub: true,
-  },
-});
-
 gsap.to(".animate-b-t-3", {
   y: 40,
   opacity: 2,

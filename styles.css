@@ -452,7 +452,7 @@ nav {
 }
 .experiencia-grid-container {
   grid-template-columns: repeat(16rem);
-  gap: 2rem;
+  gap: 1rem;
 }
 .experiencia-title {
   color: var(--primary-color);
