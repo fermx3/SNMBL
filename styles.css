@@ -350,7 +350,7 @@ nav {
   display: grid;
   width: 80%;
   margin: auto;
-  grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(22rem, 1fr));
   gap: 5rem;
 }
 
@@ -375,7 +375,6 @@ nav {
   width: 300px;
   height: 300px;
   padding: 0.5rem;
-  border-radius: 100%;
   object-fit: cover;
 }
 
@@ -451,7 +450,7 @@ nav {
   z-index: -1;
 }
 .experiencia-grid-container {
-  grid-template-columns: repeat(16rem);
+  grid-template-columns: repeat(auto-fit, minmax(22rem, 16rem));
   gap: 1rem;
 }
 .experiencia-title {
@@ -507,6 +506,45 @@ nav {
   font-size: 1rem;
   letter-spacing: 5px;
   text-transform: uppercase;
+}
+
+/*** Responsive Styles Tablets & below ***/
+@media all and (max-width: 980px) {
+  .menu-modal {
+    width: 100vw;
+  }
+  .video-container {
+    grid-row: 1/2;
+    grid-column: 1/-1;
+    width: 94vw;
+    padding: 0 3vw;
+  }
+  .video-container::after {
+    width: 94vw;
+    left: 3vw;
+  }
+  .main-video {
+    width: 94vw;
+  }
+  .grid-container{
+    grid-template-columns: repeat(auto-fill, minmax(14rem, 1fr));
+  }
+  .main-logo-container {
+    grid-area: 2/1;
+    width: 94vw;
+    padding: 0 3vw;
+    padding-top: 5rem;
+    margin-left: 40px;
+  }
+  .main-title-container {
+    width: 94vw;
+    padding: 0 3vw;
+    grid-area: 3/1;
+  }
+  .card-img {
+    width: 90%;
+    height: 90%;
+  }
 }
 
 /*** Responsive Styles Smartphone Only ***/
@@ -565,10 +603,12 @@ nav {
   }
   .profile {
     flex-direction: unset;
+    justify-content: unset;
   }
   .profile-details {
     margin-top: 0;
     margin-left: 1rem;
+    text-align: left;
   }
   .profile-name {
     font-size: 1rem;
@@ -610,41 +650,5 @@ nav {
   }
   .scroll-down-container p {
     font-size: 0.8rem;
-  }
-}
-
-/*** Responsive Styles Tablets & below ***/
-@media all and (max-width: 980px) {
-  .menu-modal {
-    width: 100vw;
-  }
-  .video-container {
-    grid-row: 1/2;
-    grid-column: 1/-1;
-    width: 94vw;
-    padding: 0 3vw;
-  }
-  .video-container::after {
-    width: 94vw;
-    left: 3vw;
-  }
-  .main-video {
-    width: 94vw;
-  }
-  .main-logo-container {
-    grid-area: 2/1;
-    width: 94vw;
-    padding: 0 3vw;
-    padding-top: 5rem;
-    margin-left: 40px;
-  }
-  .main-title-container {
-    width: 94vw;
-    padding: 0 3vw;
-    grid-area: 3/1;
-  }
-  .card-img {
-    width: 90%;
-    height: 90%;
   }
 }
