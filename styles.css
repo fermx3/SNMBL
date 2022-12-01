@@ -351,7 +351,7 @@ nav {
   width: 80%;
   margin: auto;
   grid-template-columns: repeat(auto-fill, minmax(22rem, 1fr));
-  gap: 5rem;
+  gap: 10vh;
 }
 
 /************ EQUIPO **************/
@@ -372,8 +372,8 @@ nav {
 }
 
 .profile-pic {
-  width: 300px;
-  height: 300px;
+  width: 30vh;
+  height: 30vh;
   padding: 0.5rem;
   object-fit: cover;
 }
@@ -444,7 +444,7 @@ nav {
   background-color: var(--ligth-gray);
   display: grid;
   grid-template-columns: 1fr 4rem;
-  grid-template-rows: repeat(30px);
+  grid-template-rows: 1fr;
   align-items: center;
   align-content: center;
   z-index: -1;
@@ -464,7 +464,7 @@ nav {
 }
 .brand img {
   object-fit: contain;
-  width: 150px;
+  width: 18vh;
 }
 /************ CONTACTO **************/
 .contacto {
@@ -565,8 +565,8 @@ nav {
     gap: 1;
   }
   .section-title {
-    font-size: 2rem;
-    line-height: 2rem;
+    font-size: 7vh;
+    line-height: 7vh;
   }
   .nosotros-img {
     position: absolute;
