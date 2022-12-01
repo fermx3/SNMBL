@@ -300,13 +300,13 @@ nav {
 }
 
 .section-title {
-  font-size: 4rem;
+  font-size: 7vh;
   font-weight: 800;
   color: var(--green);
   grid-row: 1 / span 100;
   text-align: center;
   writing-mode: vertical-rl;
-  line-height: 4rem;
+  line-height: 7vh;
   transform: rotate(180deg);
 }
 
@@ -450,8 +450,10 @@ nav {
   z-index: -1;
 }
 .experiencia-grid-container {
-  grid-template-columns: repeat(auto-fit, minmax(22rem, 16rem));
+  grid-template-columns: repeat(auto-fit, minmax(17rem, 16rem));
   gap: 1rem;
+  justify-content: center;
+  justify-items: center;
 }
 .experiencia-title {
   color: var(--primary-color);
@@ -563,10 +565,6 @@ nav {
     background-color: var(--primary-color);
     grid-template-columns: 2rem 1fr;
     gap: 1;
-  }
-  .section-title {
-    font-size: 7vh;
-    line-height: 7vh;
   }
   .nosotros-img {
     position: absolute;
