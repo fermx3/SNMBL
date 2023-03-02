@@ -300,13 +300,13 @@ nav {
 }
 
 .section-title {
-  font-size: 4rem;
+  font-size: 7vh;
   font-weight: 800;
   color: var(--green);
   grid-row: 1 / span 100;
   text-align: center;
   writing-mode: vertical-rl;
-  line-height: 4rem;
+  line-height: 7vh;
   transform: rotate(180deg);
 }
 
@@ -351,7 +351,7 @@ nav {
   width: 80%;
   margin: auto;
   grid-template-columns: repeat(auto-fill, minmax(22rem, 1fr));
-  gap: 5rem;
+  gap: 10vh;
 }
 
 /************ EQUIPO **************/
@@ -372,8 +372,8 @@ nav {
 }
 
 .profile-pic {
-  width: 300px;
-  height: 300px;
+  width: 30vh;
+  height: 30vh;
   padding: 0.5rem;
   object-fit: cover;
 }
@@ -444,14 +444,16 @@ nav {
   background-color: var(--ligth-gray);
   display: grid;
   grid-template-columns: 1fr 4rem;
-  grid-template-rows: repeat(30px);
+  grid-template-rows: 1fr;
   align-items: center;
   align-content: center;
   z-index: -1;
 }
 .experiencia-grid-container {
-  grid-template-columns: repeat(auto-fit, minmax(22rem, 16rem));
+  grid-template-columns: repeat(auto-fit, minmax(17rem, 16rem));
   gap: 1rem;
+  justify-content: center;
+  justify-items: center;
 }
 .experiencia-title {
   color: var(--primary-color);
@@ -464,7 +466,7 @@ nav {
 }
 .brand img {
   object-fit: contain;
-  width: 150px;
+  width: 18vh;
 }
 /************ CONTACTO **************/
 .contacto {
@@ -563,10 +565,6 @@ nav {
     background-color: var(--primary-color);
     grid-template-columns: 2rem 1fr;
     gap: 1;
-  }
-  .section-title {
-    font-size: 2rem;
-    line-height: 2rem;
   }
   .nosotros-img {
     position: absolute;
