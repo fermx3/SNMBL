@@ -1,4 +1,4 @@
-export function ExperienciaGrid() {
+export function experienciaGrid() {
   const experienciaGrid = document.getElementById('experiencia-grid');
 
   const brands = [

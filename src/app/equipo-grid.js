@@ -1,4 +1,4 @@
-export function EquipoGrid() {
+export function equipoGrid() {
   const equipoGrid = document.getElementById('equipo-grid');
 
   const equipo = [

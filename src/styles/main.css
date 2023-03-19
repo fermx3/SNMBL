@@ -349,7 +349,7 @@ nav {
   display: grid;
   width: 80%;
   margin: auto;
-  grid-template-columns: repeat(auto-fill, minmax(22rem, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
   gap: 10vh;
 }
 
@@ -393,7 +393,7 @@ nav {
       rgba(0, 0, 0, 0) 0%,
       rgba(0, 0, 0, 0.8) 100%
     ),
-    url('src/images/luna-oceano.jpg');
+    url('../images/luna-oceano.jpg');
   background-size: cover;
   background-position: 50%;
   background-repeat: no-repeat;
@@ -465,7 +465,7 @@ nav {
 }
 .brand img {
   object-fit: contain;
-  width: 18vh;
+  width: 12vh;
 }
 /************ CONTACTO **************/
 .contacto {

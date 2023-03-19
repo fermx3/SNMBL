@@ -1,4 +1,4 @@
-export function NosotrosGrid() {
+export function nosotrosGrid() {
   const nosostrosGrid = document.getElementById('nosotros-grid');
 
   const nosotrosList = [
