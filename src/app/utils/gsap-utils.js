@@ -3,6 +3,10 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
 import { Draggable } from 'gsap/Draggable';
 
+import { closeMenu } from '../menu';
+
+const handleClose = closeMenu();
+
 export function gsapUtils() {
   gsap.registerPlugin(ScrollTrigger, ScrollToPlugin, Draggable);
   let sections = gsap.utils.toArray('.horizontal-section');

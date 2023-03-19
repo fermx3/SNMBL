@@ -1,7 +1,5 @@
-const menuLogo = document.querySelector('.menu-logo');
 const menuButton = document.querySelector('.menu-button');
 const menuModal = document.querySelector('.menu-modal');
-const menuCloseButton = document.querySelector('.close-icon');
 const listItems = document.querySelectorAll('.main-menu > ul > li');
 
 export function openMenu() {
@@ -23,28 +21,20 @@ export function openMenu() {
 }
 
 export function closeMenu() {
-  var closeMenu = function () {
-    for (const item of listItems) {
-      item.classList.remove('intro-animation-l');
-      item.classList.add('outro-animation-l');
-    }
+  for (const item of listItems) {
+    item.classList.remove('intro-animation-l');
+    item.classList.add('outro-animation-l');
+  }
 
-    menuModal.classList.add('outro-animation-r');
+  menuModal.classList.add('outro-animation-r');
 
-    Promise.all(
-      menuModal.getAnimations().map(function (animation) {
-        return animation.finished;
-      })
-    ).then(function () {
-      menuModal.classList.remove('menu-active', 'outro-animation-r');
-      menuButton.classList.remove('menu-btn-active');
-      menuButton.classList.add('intro-animation-r');
-    });
-  };
-
-  menuCloseButton.addEventListener('click', closeMenu);
-  menuLogo.addEventListener('click', closeMenu);
-  // listItems.forEach(function (item) {
-  //   item.addEventListener("click", closeMenu);
-  // });
+  Promise.all(
+    menuModal.getAnimations().map(function (animation) {
+      return animation.finished;
+    })
+  ).then(function () {
+    menuModal.classList.remove('menu-active', 'outro-animation-r');
+    menuButton.classList.remove('menu-btn-active');
+    menuButton.classList.add('intro-animation-r');
+  });
 }
