@@ -17,6 +17,7 @@
 @font-face {
   font-family: 'PPNeueBit';
   src: url('../fonts/PPNeueBit-Bold.otf');
+  font-display: swap;
 }
 
 ::-webkit-scrollbar-track {
@@ -64,13 +65,13 @@ button {
   background-color: var(--green);
   border: solid var(--primary-color) 2px;
   transition: all 0.5s;
-}
 
-button:hover {
-  color: var(--green);
-  background-color: var(--primary-color);
-  border: solid var(--ligth-gray) 2px;
-  transition: all 0.5s;
+  &:hover {
+    color: var(--green);
+    background-color: var(--primary-color);
+    border: solid var(--ligth-gray) 2px;
+    transition: all 0.5s;
+  }
 }
 
 .social-icon,
@@ -154,21 +155,21 @@ nav {
   font-weight: bold;
   text-transform: uppercase;
   margin: 5rem 2rem;
-}
 
-.main-menu ul {
-  font-family: 'Syne', sans-serif;
-}
+  ul {
+    font-family: 'Syne', sans-serif;
 
-.main-menu ul li {
-  opacity: 0;
-  padding-bottom: 1rem;
-}
+    li {
+      opacity: 0;
+      padding-bottom: 1rem;
 
-.main-menu ul li a:hover {
-  color: var(--green);
-  -webkit-animation: flicker-5 8s linear infinite both;
-  animation: flicker-5 8s linear infinite both;
+      &:hover {
+        color: var(--green);
+        -webkit-animation: flicker-5 8s linear infinite both;
+        animation: flicker-5 8s linear infinite both;
+      }
+    }
+  }
 }
 
 .menu-footer {
@@ -224,25 +225,25 @@ nav {
   position: relative;
   width: 100%;
   z-index: -1;
+
+  &::after {
+    position: absolute;
+    top: 0;
+    left: 5vw;
+    width: 120%;
+    height: 100%;
+    content: '';
+    background-image: linear-gradient(
+      -90deg,
+      #000000,
+      rgba(11, 39, 65, 0.32) 87%,
+      rgba(0, 0, 0, 0)
+    );
+  }
 }
 
 .main-video {
   width: 120%;
-}
-
-.video-container::after {
-  position: absolute;
-  top: 0;
-  left: 5vw;
-  width: 120%;
-  height: 100%;
-  content: '';
-  background-image: linear-gradient(
-    -90deg,
-    #000000,
-    rgba(11, 39, 65, 0.32) 87%,
-    rgba(0, 0, 0, 0)
-  );
 }
 
 .main-logo-container {
@@ -335,9 +336,10 @@ nav {
   grid-row: 2/3;
   width: fit-content;
   box-shadow: 20px 20px 0 -4px var(--gray);
-}
-.nosotros-img img {
-  width: 40vw;
+
+  img {
+    width: 40vw;
+  }
 }
 
 .nosotros-2 {
@@ -409,28 +411,33 @@ nav {
   border: solid 4px var(--gray);
   box-shadow: 15px 15px 0 -4px var(--ligth-gray), 15px 15px var(--gray);
   transition: all 0.5s;
-}
-.card:hover {
-  transform: translate3d(-0.5rem, -0.5rem, 0);
-  box-shadow: 23px 23px 0 -4px var(--ligth-gray), 23px 23px var(--gray);
-  transition: all 0.5s;
+
+  &:hover {
+    transform: translate3d(-0.5rem, -0.5rem, 0);
+    box-shadow: 23px 23px 0 -4px var(--ligth-gray), 23px 23px var(--gray);
+    transition: all 0.5s;
+  }
 }
 .card-details {
   max-width: 300px;
   padding: 0.5rem;
+
+  h3 {
+    color: var(--primary-color);
+    margin-bottom: 0.2rem;
+  }
+
+  p,
+  a {
+    color: var(--primary-color);
+    font-size: 0.8rem;
+  }
 }
-.card-details h3 {
-  color: var(--primary-color);
-  margin-bottom: 0.2rem;
-}
-.card-details p,
-.card-details a {
-  color: var(--primary-color);
-  font-size: 0.8rem;
-}
+
 .card-desc {
   margin-bottom: 0.5rem;
 }
+
 .trabajo-btn {
   grid-column: 1/ -1;
   justify-self: center;
@@ -462,10 +469,11 @@ nav {
 .brand {
   width: fit-content;
   align-items: center;
-}
-.brand img {
-  object-fit: contain;
-  width: 12vh;
+
+  img {
+    object-fit: contain;
+    width: 12vh;
+  }
 }
 /************ CONTACTO **************/
 .contacto {
@@ -502,12 +510,13 @@ nav {
   transform: translateY(-35px);
   animation: slide-bottom 1s ease 3s 1 normal forwards,
     flicker-5 8s linear infinite both;
-}
-.scroll-down-container p {
-  font-family: var(--pp-neue-bit);
-  font-size: 1rem;
-  letter-spacing: 5px;
-  text-transform: uppercase;
+
+  p {
+    font-family: var(--pp-neue-bit);
+    font-size: 1rem;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+  }
 }
 
 /*** Responsive Styles Tablets & below ***/
@@ -520,10 +529,10 @@ nav {
     grid-column: 1/-1;
     width: 94vw;
     padding: 0 3vw;
-  }
-  .video-container::after {
-    width: 94vw;
-    left: 3vw;
+    &::after {
+      width: 94vw;
+      left: 3vw;
+    }
   }
   .main-video {
     width: 94vw;
@@ -536,7 +545,7 @@ nav {
     width: 94vw;
     padding: 0 3vw;
     padding-top: 5rem;
-    margin-left: 40px;
+    margin-left: 60px;
   }
   .main-title-container {
     width: 94vw;
@@ -637,8 +646,10 @@ nav {
   .social-media-container .social-icon {
     transform: scale(1);
   }
-  .brand img {
-    width: 70px;
+  .brand {
+    img {
+      width: 70px;
+    }
   }
   .experiencia-grid-container {
     grid-template-columns: 50% 50%;
@@ -646,7 +657,9 @@ nav {
     margin-left: auto;
     margin-right: 0;
   }
-  .scroll-down-container p {
-    font-size: 0.8rem;
+  .scroll-down-container {
+    p {
+      font-size: 0.8rem;
+    }
   }
 }
