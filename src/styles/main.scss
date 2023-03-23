@@ -125,7 +125,6 @@ nav {
     top: 0;
     right: 0;
     height: 100vh;
-    width: 40vw;
   }
   .menu-active {
     display: grid;
@@ -521,8 +520,10 @@ nav {
 
 /*** Responsive Styles Tablets & below ***/
 @media all and (max-width: 980px) {
-  .menu-modal {
-    width: 100vw;
+  nav {
+    .menu-modal {
+      width: 100vw;
+    }
   }
   .video-container {
     grid-row: 1/2;
@@ -563,11 +564,13 @@ nav {
   button {
     font-size: 1.2rem;
   }
-  .menu-modal {
-    height: 90vh;
-  }
-  .main-menu {
-    font-size: 2rem;
+  nav {
+    .menu-modal {
+      height: 90vh;
+    }
+    .main-menu {
+      font-size: 2rem;
+    }
   }
   .nosotros,
   .equipo {
