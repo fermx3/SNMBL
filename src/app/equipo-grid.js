@@ -1,24 +1,29 @@
+import cieloMejia from '../assets/images/equipo/cielo-mejia-directora-audiovisual.png';
+import omarRamirez from '../assets/images/equipo/omar-ramirez-director-de-arte.png';
+import diegoCeballos from '../assets/images/equipo/diego-ceballos-director-de-estrategia.png';
+import juachiZamudio from '../assets/images/equipo/silueta-1.jpg';
+
 export function equipoGrid() {
   const equipoGrid = document.getElementById('equipo-grid');
 
   const equipo = [
     {
-      photo: 'src/images/equipo/cielo-mejia-directora-audiovisual.png',
+      photo: cieloMejia,
       name: 'Cielo Mejía',
       desc: 'Directora de Audiovisual',
     },
     {
-      photo: 'src/images/equipo/omar-ramirez-director-de-arte.png',
+      photo: omarRamirez,
       name: 'Omar Ramirez',
       desc: 'Director de Arte',
     },
     {
-      photo: 'src/images/equipo/diego-ceballos-director-de-estrategia.png',
+      photo: diegoCeballos,
       name: 'Diego Ceballos',
       desc: 'Director de Estrategia',
     },
     {
-      photo: 'src/images/equipo/silueta-1.jpg',
+      photo: juachiZamudio,
       name: 'Juanchi Zamudio',
       desc: 'Director Creativo',
     },

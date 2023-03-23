@@ -5,8 +5,8 @@ import { nosotrosGrid } from './app/nosotros-grid';
 import { equipoGrid } from './app/equipo-grid';
 import { experienciaGrid } from './app/experiencia-grid';
 
-import './styles/animations.css';
-import './styles/main.css';
+import './styles/animations.scss';
+import './styles/main.scss';
 
 const menuCloseButton = document.querySelector('.close-icon');
 const menuLogo = document.querySelector('.menu-logo');
